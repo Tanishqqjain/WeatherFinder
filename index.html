@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
     <title>Weather API</title>
-    <style>
-    body{
-        margin: 0px;
-        padding: 0px;
-    }
-    </style>
+    <!-- Mapquest Mapping Api -->
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+    <!-- End of Mapquest Mapping Api -->
 </head>
-<body class="bg-washed-yellow">
+<body class="bg-washed-yellow ma0 pa0">
     <div class="bg-dark-gray bb b--black-20 shadow-1 justify-center flex flex-wrap">
         <input class="ba b--black-40 pa2 ma2 w-50-ns" type="text" id="location" placeholder="Enter City">
-        <button class="pa2 ma2 bg-moon-gray shadow-hover" onclick="weather()">Get Temperature </button>
+        <button class="pa2 ma2 bg-moon-gray shadow-hover" onclick="weather()">Fetch</button>
     </div>
-    <div class="pa2 flex vh-75 w-100 justify-center items-center">
-        <div class="red pa3 f-headline-ns root f2"></div>
+    <div class="pa2 b--blue flex flex-wrap  w-100 justify-center items-center">
+        <div class="dark pa5 f-headline-ns root f2"></div>
+        <div id="place" class="red mt3 f-headline-ns w-90 f2 vh-50"></div>
     </div>
     <script src="main.js"></script>
 </body>
